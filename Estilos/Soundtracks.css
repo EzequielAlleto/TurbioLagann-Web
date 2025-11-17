@@ -1,0 +1,500 @@
+/* 🎨 ESTILOS PROFESIONALES PARA SOUNDTRACKS - DISEÑO CONSISTENTE */
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #3d404d, #1b2735 70%, #090a0f);
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+/* Botón volver al inicio elegante */
+#Inicio {
+    margin-bottom: 20px;
+}
+
+#Inicio a {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.95);
+    color: #4a5568;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+#Inicio a:hover {
+    background: rgb(227, 232, 252);
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    color: #2d3748;
+}
+
+/* Sección principal */
+#Soundtracks {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    margin: 0;
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#Soundtracks h2 {
+    text-align: center;
+    color: #2d3748;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Imagen de la sección */
+#Soundtracks img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#Soundtracks img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ESTILOS PARA ESTADÍSTICAS */
+.content-stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+    text-align: center;
+    padding: 15px 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 📋 INFORMACIÓN TÉCNICA */
+.tech-info {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(248, 249, 250, 0.95);
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.tech-info h4 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.tech-item {
+    padding: 10px 15px;
+    background: white;
+    border-radius: 8px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.tech-item strong {
+    color: #495057;
+}
+
+#Soundtracks h3 {
+    color: #4a5568;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Lista de contenido estilizada */
+#Soundtracks nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#Soundtracks nav ul li {
+    background-color: rgba(102, 126, 234, 0.1);
+    margin: 12px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+#Soundtracks nav ul li:hover {
+    background-color: rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    border-left-color: #764ba2;
+}
+
+/* Párrafo y enlace de acceso */
+#Soundtracks p {
+    font-size: 1.2em;
+    color: #4a5568;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#Soundtracks a {
+    display: inline-block;
+    background-color: #667eea;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+#Soundtracks a:hover {
+    background-color: #5a67d8;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* GALERÍA DE SCREENSHOTS */
+#galeria {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    margin: 0;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#galeria h2 {
+    color: #2d3748;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#galeria p {
+    color: #4a5568;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Controles del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.indicator {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active,
+.indicator:hover {
+    background-color: white;
+}
+
+/* MODAL PARA IMÁGENES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+#modalCaption {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #667eea;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer */
+#footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#footer p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+#footer p:first-child {
+    font-weight: 600;
+    font-size: 1em;
+    opacity: 1;
+}
+
+#footer a {
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    #Soundtracks {
+        padding: 25px;
+    }
+    
+    #Soundtracks h2 {
+        font-size: 2em;
+    }
+    
+    #Soundtracks nav ul li {
+        padding: 12px 15px;
+    }
+    
+    #Soundtracks img {
+        max-width: 250px;
+    }
+    
+    .content-stats {
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .stat-box {
+        padding: 10px 5px;
+    }
+    
+    .stat-number {
+        font-size: 1.5em;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .tech-item {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #667eea;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5a67d8;
+}

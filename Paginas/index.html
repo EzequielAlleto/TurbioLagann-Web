@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Pagina Principal | TurbioLagann Web</title>
+    <link rel='stylesheet' href='../Estilos/index.css'>
+    <link rel="icon" type="image/png" href="../Imagenes/Icono.png">
+</head>
+
+<body>
+
+    <div id="Titulo">
+        <h1>TurbioLagann Web</h1>
+        <p class="subtitle">Proyecto de Preservación</p>
+    </div>
+
+    <div id="Introduccion">
+        <h2>Acerca del proyecto</h2>
+        <p>Este proyecto fue hecho con el objetivo de preservar y compartir todo el contenido de Tengen Toppa Gurren Lagann
+           de forma segura, gratuita y sin anuncios molestos para toda la comunidad hispanohablante</p>
+        <div class="poster-container">
+            <img src="../Imagenes/Index/Poster.jpg" alt="Poster TTGL Drive">
+        </div>
+    </div>
+
+    <div id="Contenido">
+        <h2>Contenido Principal</h2>
+        
+        <div class="grid-container">
+            <div class="card" id="Completo">
+                <img src="../Imagenes/Index/Completo.jpg" alt="TTGL Drive Completo" class="card-image">
+                <h3>TTGL Drive - Completo</h3>
+                <div class="card-stats">
+                    <span class="stat-item">Anime</span>
+                    <span class="stat-item">Películas</span>
+                    <span class="stat-item">Manga Completo</span>
+                </div>
+                <div class="card-info">
+                    <span class="quality-badge">720p MP4</span>
+                    <span class="size-info">6.9 GB</span>
+                </div>
+                <a href="Completo.html" class="card-button">Acceder</a>
+            </div>
+
+            <div class="card" id="MKV">
+                <img src="../Imagenes/Index/MKVs.jpg" alt="TTGL Drive MKV" class="card-image">
+                <h3>Anime y Películas MKV</h3>
+                <div class="card-stats">
+                    <span class="stat-item">Anime</span>
+                    <span class="stat-item">Películas</span>
+                </div>
+                <div class="card-info">
+                    <span class="quality-badge">1080p MKV</span>
+                    <span class="size-info">14.9 GB</span>
+                </div>
+                <a href="MKVs.html" class="card-button">Acceder</a>
+            </div>
+
+            <div class="card" id="Extras">
+                <img src="../Imagenes/Index/Extras.jpg" alt="TTGL Drive Extras" class="card-image">
+                <h3>TTGL Drive - Extras</h3>
+                <div class="card-stats">
+                    <span class="stat-item">Parallel Works</span>
+                    <span class="stat-item">Archives</span>
+                    <span class="stat-item">Kirameki Yoko Box</span>
+                </div>
+                <div class="card-info">
+                    <span class="quality-badge">1080p MKV</span>
+                    <span class="size-info">7.8 GB</span>
+                </div>
+                <a href="Extras.html" class="card-button">Acceder</a>
+            </div>
+
+            <div class="card" id="Soundtracks">
+                <img src="../Imagenes/Index/Soundtracks.jpg" alt="TTGL Drive Soundtracks" class="card-image">
+                <h3>TTGL Drive - Soundtracks</h3>
+                <div class="card-stats">
+                    <span class="stat-item">Albumes completos</span>
+                    <span class="stat-item">Bandas sonoras</span>
+                    <span class="stat-item">Scans</span>
+                </div>
+                <div class="card-info">
+                    <span class="quality-badge">FLAC Audio</span>
+                    <span class="size-info">2.6 GB</span>
+                </div>
+                <a href="Soundtracks.html" class="card-button">Acceder</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 💬 SECCIÓN DE COMENTARIOS -->
+    <div id="comentarios">
+        <div class="comments-header">
+             <h3> Comentarios de la comunidad</h3>
+            <div id="user-info" style="display: none;">
+                <span> Hola, <strong id="current-user"></strong></span>
+                <button id="logout-btn" class="auth-btn secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+        
+        <!-- Formulario de comentarios (solo visible si está logueado) -->
+        <div id="comment-form-container" style="display: none;">
+            <div class="comment-form">
+                <textarea id="comment-text" placeholder="Escribe tu comentario aquí..." maxlength="1000" rows="4"></textarea>
+                <div class="comment-form-footer">
+                    <span id="char-counter">0/1000</span>
+                    <button id="submit-comment" class="comment-btn"> Publicar Comentario</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Prompt de login (visible si NO está logueado) -->
+        <div id="login-prompt" class="login-prompt">
+            <h4>¡Únete a la conversación!</h4>
+            <p>Inicia sesión para participar en los comentarios</p>
+            <div class="login-prompt-buttons">
+                <button id="show-login" class="auth-btn primary">Iniciar Sesión</button>
+                <button id="show-register" class="auth-btn secondary">Registrarse</button>
+            </div>
+        </div>
+        
+        <!-- Formularios de login y registro (inicialmente ocultos) -->
+        <div id="auth-forms" style="display: none;">
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="login-tab">Iniciar Sesión</button>
+                <button class="auth-tab" id="register-tab">Registrarse</button>
+            </div>
+            
+            <!-- Formulario de Login -->
+            <form id="login-form" class="auth-form">
+                <h4>Iniciar Sesión</h4>
+                <div class="form-group">
+                    <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="auth-btn primary">Entrar</button>
+                <button type="button" id="cancel-auth" class="auth-btn secondary">Cancelar</button>
+            </form>
+            
+            <!-- Formulario de Registro -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <h4>Crear Cuenta</h4>
+                <div class="form-group">
+                    <input type="text" id="register-username" placeholder="Nombre de usuario (mínimo 3 caracteres)" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" placeholder="Contraseña (mínimo 6 caracteres)" required>
+                    <p class="">Recuerda no introducir información personal ni contraseñas reales.</p>
+                </div>
+                <button type="submit" class="auth-btn primary">Registrarse</button>
+                <button type="button" id="cancel-auth-reg" class="auth-btn secondary">Cancelar</button>
+            </form>
+        </div>
+        
+        <!-- Lista de comentarios -->
+        <div id="comments-section">
+            <div id="comments-list">
+                <!-- Los comentarios se cargarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+            <p>&copy; 2025 TurbioLagann Web | Proyecto no oficial de un fan para fans</p>
+            <p>Tengen Toppa Gurren Lagann © Gainax/Trigger</p>
+            <p>Contacto:<a href="https://ig.me/m/turbiolagann" target="_blank">@TurbioLagann</a></p>
+            <p>Enterate de las novedades en <a href="Actualizaciones.html">Actualizaciones</a></p>
+    </div>
+
+    <!-- 💬 Sistema de Autenticación y Comentarios -->
+    <script src="../Scripts/AutorizacionComentarios.js"></script>
+
+</body>
+
+</html>

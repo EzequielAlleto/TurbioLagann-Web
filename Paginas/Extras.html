@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTGL Drive - Extras | TurbioLagann Web</title>
+    <link rel='stylesheet' href='../Estilos/Extras.css'>
+    <link rel="icon" type="image/png" href="../Imagenes/Icono.png">
+</head>
+
+<body>
+
+    <div id="Inicio">
+        <a href="../Paginas/index.html">← Volver al inicio</a>
+    </div>
+
+    <div id="Extras">
+        <h2>TTGL Drive - Extras</h2>
+        <img src="../Imagenes/Index/Extras.jpg" alt="TTGL Drive Extras">
+        
+        <!-- ESTADÍSTICAS DE CONTENIDO -->
+        <div class="content-stats">
+            <div class="stat-box">
+                <span class="stat-number">7.8 GB</span>
+                <span class="stat-label">Peso Total</span>
+            </div>
+        </div>
+        
+        <h3>¿Qué encontrarás aquí?</h3>
+        <nav>
+        <ul>
+            <li>Kirameki Yoko Box Completo</li>
+            <li>Parallel Works </li>
+            <li>Libro de Arte: Tengen Toppa Gurren Lagann Archives</li>
+            <li>Material promocional</li>
+        </ul>
+        
+        <!-- INFORMACIÓN TÉCNICA -->
+        <div class="tech-info">
+            <h4>Detalles Técnicos:</h4>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <strong>Formato:</strong> MKV
+                </div>
+                <div class="tech-item">
+                    <strong>Calidad:</strong> 1080p Full HD
+                </div>
+                <div class="tech-item">
+                    <strong>Audio:</strong> Japonés Original
+                </div>
+            </div>
+        </div>
+        </nav>
+        <p>Accede aquí:
+        <a href="https://drive.google.com/drive/folders/1iXISax3nBvmx1GKXqm9x99HJaGQwCT40?usp=drive_link" target="_blank">TTGL Drive-Extras</a> </p>
+    </div>
+
+    <!-- GALERÍA -->
+    <div id="galeria">
+        <h2>Galería</h2>
+        <p>Vista previa del contenido disponible</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/1.png" alt="Captura 1" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/2.png" alt="Captura 2" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/3.png" alt="Captura 3" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/4.png" alt="Captura 4" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/5.png" alt="Captura 5" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/6.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/7.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Extras/8.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+            </div>
+        
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+                <span class="indicator" onclick="currentSlide(7)"></span>
+                <span class="indicator" onclick="currentSlide(8)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para imágenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <p id="modalCaption"></p>
+            <button class="modal-nav prev" onclick="modalPrev()">❮</button>
+            <button class="modal-nav next" onclick="modalNext()">❯</button>
+        </div>
+    </div>
+
+    <!-- 🚀 JavaScript externo para el carrusel -->
+    <script src="../Scripts/Extras.js"></script>
+
+    <div id="footer">
+            <p>&copy; 2025 TurbioLagann Web | Proyecto no oficial de un fan para fans</p>
+            <p>Tengen Toppa Gurren Lagann © Gainax/Trigger</p>
+            <p>Contacto:<a href="https://ig.me/m/turbiolagann" target="_blank">@TurbioLagann</a></p>
+            <p>Enterate de las novedades en <a href="Actualizaciones.html">Actualizaciones</a></p>
+    </div>
+
+</body>
+</html>

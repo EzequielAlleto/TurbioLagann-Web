@@ -1,0 +1,229 @@
+/* 🎨 ESTILOS PROFESIONALES PARA COMPLETO - DISEÑO CONSISTENTE */
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #3d404d, #1b2735 70%, #090a0f);
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+/* Botón volver al inicio elegante */
+#Inicio {
+    margin-bottom: 20px;
+}
+
+#Inicio a {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.95);
+    color: #4a5568;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+#Inicio a:hover {
+    background: rgb(227, 232, 252);
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    color: #2d3748;
+}
+
+/* Sección principal */
+#Actualizaciones {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    margin: 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#Actualizaciones h2 {
+    text-align: center;
+    color: #2d3748;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+#Actualizaciones img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#Actualizaciones img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de contenido estilizada */
+#Actualizaciones nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#Actualizaciones nav ul li {
+    background-color: rgba(102, 126, 234, 0.1);
+    margin: 12px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+#Actualizaciones nav ul li:hover {
+    background-color: rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    border-left-color: #5a67d8;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer */
+#footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#footer p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+#footer p:first-child {
+    font-weight: 600;
+    font-size: 1em;
+    opacity: 1;
+}
+
+#footer a {
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    #Completo {
+        padding: 25px;
+    }
+    
+    #Completo h2 {
+        font-size: 2em;
+    }
+    
+    #Completo nav ul li {
+        padding: 12px 15px;
+    }
+    
+    #Completo img {
+        max-width: 250px;
+    }
+    
+    .content-stats {
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .stat-box {
+        padding: 10px 5px;
+    }
+    
+    .stat-number {
+        font-size: 1.5em;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .tech-item {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    #contacto {
+        padding: 20px;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #667eea;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5a67d8;
+}
+

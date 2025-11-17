@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTGL Drive - Soundtracks | TurbioLagann Web</title>
+    <link rel='stylesheet' href='../Estilos/Soundtracks.css'>
+    <link rel="icon" type="image/png" href="../Imagenes/Icono.png">
+</head>
+
+<body>
+
+    <div id="Inicio">
+        <a href="../Paginas/index.html">← Volver al inicio</a>
+    </div>
+    
+    <div id="Soundtracks">
+        <h2>TTGL Drive - Soundtracks</h2>
+        <img src="../Imagenes/Index/Soundtracks.jpg" alt="TTGL Drive Soundtracks">
+        
+        <!-- ESTADÍSTICAS DE CONTENIDO -->
+        <div class="content-stats">
+            <div class="stat-box">
+                <span class="stat-number">2.6 GB</span>
+                <span class="stat-label">Peso Total</span>
+            </div>
+        </div>
+        
+        <h3>¿Qué encontrarás aquí?</h3>
+        <nav>
+        <ul>
+            <li>Albumes oficiales completos </li>
+            <li>Scans de portadas y discos</li>
+            <li>Material promocional</li>
+        </ul>
+        
+        <!-- INFORMACIÓN TÉCNICA -->
+        <div class="tech-info">
+            <h4>Detalles Técnicos:</h4>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <strong>Formato:</strong> FLAC
+                </div>
+                <div class="tech-item">
+                    <strong>Calidad:</strong> Sin pérdida de audio
+                </div>
+                <div class="tech-item">
+                    <strong>Compositores:</strong> Hiroyuki Sawano, Taku Iwasaki, Kazuki Nakashima
+                </div>
+            </div>
+        </div>
+        </nav>
+        <p>Accede aquí: <a href="https://drive.google.com/drive/folders/1Ut4_SAcqrjRunECrdoyAf8M7JKpPNBnh?usp=drive_link" target="_blank">TTGL Drive-Soundtracks</a></p>
+    </div>
+
+    <!-- GALERÍA DE SCREENSHOTS -->
+    <div id="galeria">
+        <h2>Galería</h2>
+        <p>Vista previa del contenido disponible</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/1.jpg" alt="Captura 1" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/2.jpg" alt="Captura 2" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/3.jpg" alt="Captura 3" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/4.jpg" alt="Captura 4" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/5.jpg" alt="Captura 5" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/6.jpg" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/7.jpg" alt="Captura 7" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Soundtracks/8.jpg" alt="Captura 8" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+            </div>
+            
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+                <span class="indicator" onclick="currentSlide(7)"></span>
+                <span class="indicator" onclick="currentSlide(8)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para imágenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <p id="modalCaption"></p>
+            <button class="modal-nav prev" onclick="modalPrev()">❮</button>
+            <button class="modal-nav next" onclick="modalNext()">❯</button>
+        </div>
+    </div>
+
+    <!-- 🚀 JavaScript externo para el carrusel -->
+    <script src="../Scripts/Soundtracks.js"></script>
+
+    <div id="footer">
+            <p>&copy; 2025 TurbioLagann Web | Proyecto no oficial de un fan para fans</p>
+            <p>Tengen Toppa Gurren Lagann © Gainax/Trigger</p>
+            <p>Contacto:<a href="https://ig.me/m/turbiolagann" target="_blank">@TurbioLagann</a></p>
+            <p>Enterate de las novedades en <a href="Actualizaciones.html">Actualizaciones</a></p>
+    </div>
+
+</body>
+</html>

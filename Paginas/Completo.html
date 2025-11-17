@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTGL Drive - Completo | TurbioLagann Web</title>
+    <link rel='stylesheet' href='../Estilos/Completo.css'>
+    <link rel="icon" type="image/png" href="../Imagenes/Icono.png">
+</head>
+
+<body>
+
+    <div id="Inicio">
+        <a href="../Paginas/index.html">← Volver al inicio</a>
+    </div>
+
+    <div id="Completo">
+        <h2>TTGL Drive - Completo</h2>
+        <img src="../Imagenes/Index/Completo.jpg" alt="TTGL Drive Completo">
+        
+        <!-- ESTADÍSTICAS DE CONTENIDO -->
+        <div class="content-stats">
+            <div class="stat-box">
+                <span class="stat-number">6.9 GB</span>
+                <span class="stat-label">Peso Total</span>
+            </div>
+        </div>
+        
+        
+        <h3>¿Qué encontrarás aquí?</h3>
+        <nav>
+        <ul>
+            <li>Anime completo</li>
+            <li>Películas: Gurren-hen y Lagann-hen</li>
+            <li>Manga completo en japonés</li>
+            <li>Material promocional</li>
+        </ul>
+        
+        <!-- INFORMACIÓN TÉCNICA -->
+        <div class="tech-info">
+            <h4>Detalles Técnicos:</h4>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <strong>Formato:</strong> MP4
+                </div>
+                <div class="tech-item">
+                    <strong>Calidad:</strong> 720p HD
+                </div>
+                <div class="tech-item">
+                    <strong>Subtítulos:</strong> Español
+                </div>
+                <div class="tech-item">
+                    <strong>Audio:</strong> Japonés Original
+                </div>
+                <div class="tech-item">
+                    <strong>Manga:</strong> JPG Japonés Original
+                </div>
+            </div>
+        </div>
+        </nav>
+        <p>Accede aquí:
+        <a href="https://drive.google.com/drive/folders/16r3R6su-4sFAT0RObaYjhkKItwjRDsos?usp=drive_link" target="_blank">TTGL Drive-Completo</a> </p>
+    </div>
+
+        <!-- GALERÍA -->
+    <div id="galeria">
+        <h2>Galería</h2>
+        <p>Vista previa del contenido disponible</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/1.png" alt=" Captura 1" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/2.png" alt="Captura 2" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/3.png" alt="Captura 3" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/4.png" alt="Captura 4" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/5.png" alt="Captura 5" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/6.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/7.png" alt="Captura 7" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../Imagenes/Completo/8.png" alt="Captura 8" title="Click aquí para maximizar" class="gallery-image">
+                </div>
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+                <span class="indicator" onclick="currentSlide(7)"></span>
+                <span class="indicator" onclick="currentSlide(8)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA VER IMÁGENES EN GRANDE -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Screenshot">
+            <div id="modalCaption"></div>
+            <button class="modal-nav prev" onclick="modalPrev()">❮</button>
+            <button class="modal-nav next" onclick="modalNext()">❯</button>
+        </div>
+    </div>
+    
+    <!-- 🚀 JavaScript externo para el carrusel -->
+    <script src="../Scripts/Completo.js"></script>
+
+    <div id="footer">
+            <p>&copy; 2025 TurbioLagann Web | Proyecto no oficial de un fan para fans</p>
+            <p>Tengen Toppa Gurren Lagann © Gainax/Trigger</p>
+            <p>Contacto:<a href="https://ig.me/m/turbiolagann" target="_blank">@TurbioLagann</a></p>
+            <p>Enterate de las novedades en <a href="Actualizaciones.html">Actualizaciones</a></p>
+    </div>
+
+</body>
+</html>
