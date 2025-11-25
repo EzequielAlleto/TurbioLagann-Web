@@ -3,7 +3,7 @@
 // TurbioLagann Web - Gestión de comentarios
 
 session_start();
-require_once '../config/Conexion.php';
+require_once '../Conexion.php';
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');

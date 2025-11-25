@@ -1,4 +1,4 @@
-/* 🎨 ESTILOS COMPLETOS PARA EL INDEX - DISEÑO PROFESIONAL */
+/* 🎨 ESTILOS PARA PORTAFOLIO "COSMIC VANGUARD - FULL WIDTH" */
 
 /* Reset y estilos base */
 * {
@@ -8,173 +8,222 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo espacial oscuro con gradiente sutil */
+    font-family: 'Poppins', sans-serif; 
     line-height: 1.6;
-    background: #1b2735;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     min-height: 100vh;
-    color: #333;
-    padding:20px;
-    
+    color: #e2e8f0; 
+    padding: 0; /* ¡QUITAMOS EL PADDING DEL BODY! */
+    display: flex;
+    flex-direction: column;
+    /* Ya no es necesario alinear al centro */
 }
 
-/* TÍTULO MEJORADO */
+/* Contenedor principal para centrar el contenido */
+#Titulo, #Introduccion, #Contenido, #comentarios, #footer, #contacto {
+    /* ¡ELIMINAMOS EL MAX-WIDTH! */
+    width: 100%; 
+    margin-bottom: 0; /* Eliminamos el margin-bottom entre secciones para que se toquen */
+    border-radius: 0; /* Eliminamos el border-radius para que los bloques sean completos */
+    box-shadow: none; /* Eliminamos la sombra que simulaba una caja */
+    /* Aseguramos que todas las secciones tengan 100% de ancho */
+}
+
+
+/* TÍTULO MEJORADO (HEADER) */
 #Titulo {
-    background-color: #466380;
+    background-color: #1e293b; 
     text-align: center;
-    padding: 15px 20px 50px 20px;
-    margin-bottom: 0;
+    padding: 40px 20px 60px 20px; 
     position: relative;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 0; /* Full width */
+    overflow: hidden;
+    border: none; /* Sin borde */
 }
 
 #Titulo h1 {
-    color: white;
-    font-size: 3.5em;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #a855f7; 
+    font-size: 4.5em; 
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5); 
 }
 
 #Titulo .subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2em;
-    margin: 0;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    color: #cbd5e1;
+    font-size: 1.4em;
+    margin-top: 5px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-/* INTRODUCCIÓN SIMPLE */
+/* INTRODUCCIÓN SIMPLE (Acerca de) */
 #Introduccion {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px 20px;
-    margin: 0;
+    background-color: #1e293b;
+    padding: 50px 30px;
     text-align: center;
+    border-radius: 0;
+    border: none; /* Sin bordes */
 }
 
 #Introduccion h2 {
-    text-align: center;
-    color: #2d3748;
-    font-size: 2.5em;
+    color: #22d3ee; 
+    font-size: 3em;
     margin-bottom: 40px;
     font-weight: 700;
     position: relative;
+    text-transform: uppercase;
+}
+
+/* Línea de separación para el título de la sección */
+#Introduccion h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #a855f7;
+    border-radius: 5px;
 }
 
 #Introduccion p {
-    color: #333;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    max-width: 600px;
+    color: #cbd5e1;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    /* Mantenemos el MAX-WIDTH aquí solo para la lectura del texto, 
+       pero la sección completa es 100% ancha. */
+    max-width: 700px; 
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* POSTER SIMPLE */
 .poster-container {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* IMAGEN SIMPLE */
 #Introduccion img {
     max-width: 100%;
-    width: 300px;
+    width: 400px; 
     height: auto;
-    border-radius: 8px;
-    border: 2px solid #ddd;
+    border-radius: 10px;
+    border: 4px solid #334155; 
 }
 
 #Introduccion img:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-    border-color: #007bff;
-    transition: all 0.3s ease;
-
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7); 
+    transform: scale(1.05);
+    border-color: #a855f7;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-/* 📦 SECCIÓN DE CONTENIDO MEJORADA */
+/* 📦 SECCIÓN DE CONTENIDO MEJORADA (LAS CARDS) */
 #Contenido {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px 30px;
+    background-color: #0f172a; 
+    padding: 50px 30px;
     margin: 0;
-    backdrop-filter: blur(20px);
     position: relative;
     overflow: hidden;
+    border-radius: 0;
+    border: none; /* Sin bordes */
 }
 
 #Contenido h2 {
     text-align: center;
-    color: #2d3748;
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    color: #22d3ee;
+    font-size: 3em;
+    margin-bottom: 60px; 
     font-weight: 700;
     position: relative;
+    text-transform: uppercase;
 }
+
+/* Línea de separación para el título de la sección */
+#Contenido h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #a855f7;
+    border-radius: 5px;
+}
+
 
 /* Grid container para las cards */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 35px; 
     padding: 20px 0;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* Mantenemos el MAX-WIDTH aquí para que las cards no se estiren demasiado 
+       en pantallas ultra-anchas, pero la sección de fondo es 100% */
+    max-width: 1200px; 
+    margin: 0 auto; /* Centramos el grid dentro del contenedor de 100% de ancho */
 }
 
 /* Estilo de cada card */
 .card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
+    background-color: #1e293b; 
+    border-radius: 10px;
+    padding: 25px;
     text-align: center;
-    border: 2px solid #e9ecef;
-    transition: all 0.3s ease;
+    border: 1px solid #334155;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.3);
-    border-color: #007bff;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4); 
+    border-color: #a855f7;
 }
 
 /* Imágenes de las cards */
 .card-image {
     width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-    background-color: #f8f9fa;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
 }
 
 /* Títulos de las cards */
 .card h3 {
-    color: #343a40;
-    font-size: 1.3em;
-    margin-bottom: 12px;
-    font-weight: bold;
+    color: #cbd5e1;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-/* Estadísticas de contenido */
+/* Estadísticas de contenido (Tags) */
 .card-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 15px;
     justify-content: center;
 }
 
 .stat-item {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #a855f7, #6d28d9); 
     color: white;
-    font-size: 0.75em;
-    padding: 4px 8px;
-    border-radius: 12px;
+    font-size: 0.85em;
+    padding: 6px 12px;
+    border-radius: 20px;
     font-weight: 600;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Información técnica */
@@ -182,655 +231,397 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     gap: 10px;
 }
 
 .quality-badge {
-    background-color: #3845be;
-    color: white;
-    font-size: 0.8em;
-    padding: 4px 10px;
-    border-radius: 15px;
+    background-color: #22d3ee; 
+    color: #0f172a;
+    font-size: 0.9em;
+    padding: 6px 15px;
+    border-radius: 20px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .size-info {
-    background-color: #f8f9fa;
-    color: #495057;
-    font-size: 0.8em;
-    padding: 4px 10px;
-    border-radius: 15px;
+    background-color: #334155; 
+    color: #cbd5e1;
+    font-size: 0.9em;
+    padding: 6px 15px;
+    border-radius: 20px;
     font-weight: 600;
-    border: 1px solid #dee2e6;
-}
-
-/* Descripción en las cards */
-.card p {
-    color: #6c757d;
-    font-size: 0.95em;
-    margin-bottom: 20px;
-    line-height: 1.4;
 }
 
 /* Botones de las cards */
 .card-button {
     display: inline-block;
-    background-color: #667eea;
+    background: linear-gradient(90deg, #a855f7 0%, #22d3ee 100%); 
     color: #ffffff;
     text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 1em;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .card-button:hover {
-    background-color: #5a67d8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(34, 211, 238, 0.5); 
+    transform: scale(1.05);
 }
 
 .card-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
+    transform: scale(1.0);
+    box-shadow: none;
 }
 
 
 
 /* 📱 RESPONSIVE DESIGN MEJORADO */
 @media (max-width: 768px) {
-    /* Hero Section Mobile */
+    /* Header Mobile */
     #Titulo {
-        padding: 10px 15px 35px 15px;
-    }
-    
-    #Titulo{
-        padding: 6px 15px;
-
-    }
-    
-    #Titulo p {
-        font-size: 0.8em;
+        padding: 25px 15px 40px 15px;
     }
     
     #Titulo h1 {
-        font-size: 2.2em;
-        margin-bottom: 8px;
+        font-size: 3em;
     }
     
     #Titulo .subtitle {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     
+    /* Introducción Mobile */
     #Introduccion {
-        padding: 20px 15px;
-        margin: 0;
+        padding: 30px 20px;
     }
     
     #Introduccion h2 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
+        font-size: 2.2em;
+        margin-bottom: 25px;
     }
     
     #Introduccion p {
-        font-size: 1em;
-        line-height: 1.4;
-        margin-bottom: 15px;
+        font-size: 1.1em;
     }
     
     #Introduccion img {
-        width: 250px;
+        width: 300px;
     }
     
+    /* Contenido Mobile */
     #Contenido {
-        padding: 35px 25px;
-        margin: 0;
+        padding: 40px 20px;
+    }
+    
+    #Contenido h2 {
+        font-size: 2.2em;
+        margin-bottom: 40px;
     }
     
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 15px;
+        gap: 30px;
+        max-width: 100%; /* Permitimos que ocupe todo el ancho disponible en móvil */
+        padding: 0 15px; /* Añadimos padding a los lados para que las cards no toquen los bordes */
     }
     
     .card {
-        padding: 15px;
+        padding: 20px;
     }
     
     .card-image {
-        height: 150px;
+        height: 180px;
     }
     
     .card h3 {
-        font-size: 1.2em;
-    }
-    
-    .stat-item {
-        font-size: 0.7em;
-        padding: 3px 6px;
-    }
-    
-    .card-info {
-        flex-direction: column;
-        gap: 5px;
-        align-items: stretch;
+        font-size: 1.4em;
     }
     
     .quality-badge, .size-info {
-        text-align: center;
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
     
     .card-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
+        padding: 12px 25px;
+        font-size: 1em;
     }
-
 }
+
 
 /* Sección de contacto espectacular */
 #contacto {
-    background-color: #4facfe;
-    padding: 40px;
+    background-color: #22d3ee; 
+    padding: 50px;
     margin: 0;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+    box-shadow: none; /* Quitamos la sombra de caja */
     position: relative;
     overflow: hidden;
+    color: #0f172a; 
+    border-radius: 0;
 }
 
 /* Footer moderno */
 #footer {
-    background-color: #2c3e50;
-    color: #ffffff;
+    background-color: #020617; 
+    color: #94a3b8; 
     text-align: center;
-    padding: 30px;
+    padding: 35px;
     margin: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 0; /* Full width */
+    border: none; /* Sin bordes */
 }
 
 #footer p {
-    margin: 5px 0;
-    font-size: 0.95em;
+    margin: 7px 0;
+    font-size: 1em;
     opacity: 0.9;
 }
 
 #footer p:first-child {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.2em;
     opacity: 1;
 }
 
 #footer a {
-    color: #ffffff;
+    color: #22d3ee; 
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-/* Removidas animaciones de entrada */
+#footer a:hover {
+    color: #a855f7; 
+    text-decoration: underline;
+}
 
-/* Scrollbar personalizada */
+/* Scrollbar personalizada - Se mantienen los colores de acento */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #667eea;
+    background-color: #a855f7;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #5a67d8;
+    background-color: #6d28d9;
 }
 
 @media (max-width: 480px) {
     .card-image {
-        height: 120px;
+        height: 150px;
     }
     
     .card h3 {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 }
 
-/* 💬 ESTILOS DE COMENTARIOS */
+/* 💬 ESTILOS DE COMENTARIOS (Ajustados al tema oscuro) */
 #comentarios {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #1e293b;
     border-radius: 0;
     padding: 40px;
     margin: 0;
+    border: none;
+}
+
+/* Centrado del contenido de comentarios para mejor lectura en full-width */
+#comentarios > * {
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #comentarios h3 {
-    color: #333;
-    font-size: 2em;
+    color: #a855f7;
+    font-size: 2.2em;
     margin-bottom: 15px;
     text-align: center;
-    text-shadow: none;
+    text-shadow: 0 0 5px rgba(168, 85, 247, 0.2);
 }
 
 #comentarios > p {
     text-align: center;
-    color: #666;
+    color: #94a3b8;
     margin-bottom: 30px;
     font-size: 1.1em;
 }
 
 /* Formulario de comentarios */
 .comment-form {
-    background: #f8f9fa;
+    background: #0f172a;
     padding: 25px;
-    border-radius: 12px;
-    border: 2px solid #667eea;
+    border-radius: 10px;
+    border: 2px solid #a855f7;
     margin-bottom: 30px;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.form-group p {
-    color: #333;
-    font-size: 1.0em;
-    margin-bottom: 10px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-    resize: vertical;
+    background-color: #334155;
+    color: #e2e8f0;
+    border: 2px solid #334155;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
 }
 
 .char-count {
-    position: absolute;
-    bottom: -20px;
-    right: 5px;
-    font-size: 0.8em;
-    color: #666;
+    color: #94a3b8;
 }
 
 .comment-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(135deg, #a855f7 0%, #6d28d9 100%);
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
 }
 
 .comment-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 20px rgba(168, 85, 247, 0.5);
 }
 
 /* Lista de comentarios */
 #commentsList h4 {
-    color: #333;
-    margin: 30px 0 20px 0;
-    font-size: 1.4em;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 10px;
+    color: #22d3ee;
+    border-bottom: 2px solid #22d3ee;
 }
 
 .comment-item {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #1e293b;
+    border: 1px solid #334155;
 }
 
 .comment-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 5px 15px rgba(34, 211, 238, 0.2);
 }
 
 .comment-author {
-    font-weight: bold;
-    color: #667eea;
-    font-size: 0.9em;
+    color: #22d3ee;
 }
 
 .comment-time {
-    color: #888;
-    font-size: 0.8em;
-}
-
-.comment-delete {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    color: #94a3b8;
 }
 
 .comment-delete:hover {
-    background-color: #ffebee;
+    background-color: #334155;
 }
 
 .comment-content {
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-}
-
-.comment-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+    color: #e2e8f0;
 }
 
 .comment-like,
 .comment-report {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.85em;
-    transition: background-color 0.2s ease;
+    color: #a855f7;
 }
 
 .comment-like:hover {
-    background-color: #e8f5e8;
+    background-color: #334155;
 }
 
 .comment-report:hover {
-    background-color: #fff3e0;
-}
-
-.like-count {
-    margin-left: 5px;
-    font-weight: bold;
+    background-color: #334155;
 }
 
 .no-comments {
-    text-align: center;
-    padding: 40px 20px;
-    color: #666;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 2px dashed #ddd;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 2px dashed #334155;
 }
 
-.no-comments p:first-child {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Animaciones para mensajes */
-@keyframes slideIn {
-    from {
-        transform: translateX(300px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideOut {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(300px);
-        opacity: 0;
-    }
-}
-
-/* Responsive para comentarios */
-@media (max-width: 768px) {
-    #comentarios {
-        padding: 20px;
-    }
-    
-    .comment-form {
-        padding: 15px;
-    }
-    
-    .comment-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    
-    .comment-actions {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-}
-
-/* 🔐 ESTILOS ADICIONALES PARA SISTEMA DE AUTH */
+/* 🔐 ESTILOS ADICIONALES PARA SISTEMA DE AUTH (Ajustados al tema oscuro) */
 .comments-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #667eea;
-}
-
-.comments-header h3 {
-    margin: 0;
+    border-bottom: 2px solid #a855f7;
 }
 
 #user-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #666;
-    font-size: 0.9em;
+    color: #94a3b8;
 }
 
 #current-user {
-    color: #667eea;
-    font-weight: bold;
-}
-
-.auth-btn {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 0.9em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+    color: #22d3ee;
 }
 
 .auth-btn.primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #a855f7 0%, #6d28d9 100%);
 }
 
 .auth-btn.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
 }
 
 .auth-btn.secondary {
-    background: #f8f9fa;
-    color: #667eea;
-    border: 2px solid #667eea;
+    background: #334155;
+    color: #22d3ee;
+    border: 2px solid #22d3ee;
 }
 
 .auth-btn.secondary:hover {
-    background: #667eea;
-    color: white;
+    background: #22d3ee;
+    color: #0f172a;
 }
 
 .login-prompt {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 12px;
-    border: 2px solid #667eea;
-    margin-bottom: 30px;
+    background: #0f172a;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
 .login-prompt h4 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.3em;
+    color: #e2e8f0;
 }
 
 .login-prompt p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.login-prompt-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+    color: #94a3b8;
 }
 
 #auth-forms {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 30px;
-    border: 2px solid #667eea;
-}
-
-.auth-tabs {
-    display: flex;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #e9ecef;
+    background: #1e293b;
+    border: 2px solid #22d3ee;
 }
 
 .auth-tab {
-    background: none;
-    border: none;
-    padding: 12px 20px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #666;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    color: #94a3b8;
+    border-bottom: 2px solid #334155;
 }
 
 .auth-tab.active {
-    color: #667eea;
-    border-bottom-color: #667eea;
+    color: #22d3ee;
+    border-bottom-color: #22d3ee;
 }
 
 .auth-form h4 {
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.comment-form textarea {
-    margin-bottom: 15px;
-}
-
-.comment-form-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#char-counter {
-    color: #666;
-    font-size: 0.9em;
+    color: #e2e8f0;
 }
 
 .comment {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.comment-author-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    background: #0f172a;
+    border: 1px solid #334155;
 }
 
 .comment-author.turbio {
-    color: #e91e63;
+    color: #a855f7;
 }
 
 .comment-author.usuario {
-    color: #667eea;
+    color: #22d3ee;
 }
 
-.comment-content {
-    white-space: pre-wrap;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .login-prompt-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .comments-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    #user-info {
-        width: 100%;
-        justify-content: space-between;
-    }
-}
-
-
+/* Fin del estilo Cosmic Vanguard Full Width */

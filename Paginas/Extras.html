@@ -58,62 +58,39 @@
 
     <!-- GALERÍA -->
     <div id="galeria">
-        <h2>Galería</h2>
-        <p>Vista previa del contenido disponible</p>
-        
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/1.png" alt="Captura 1" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/2.png" alt="Captura 2" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/3.png" alt="Captura 3" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/4.png" alt="Captura 4" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/5.png" alt="Captura 5" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/6.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/7.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../Imagenes/Extras/8.png" alt="Captura 6" title="Click aquí para maximizar" class="gallery-image">
-                </div>
+        <h3>Galería de Screenshots</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/1.png" alt="Screenshot 1" onclick="openModal(this.src)">
             </div>
-        
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
-            
-            <div class="carousel-indicators">
-                <span class="indicator active" onclick="currentSlide(1)"></span>
-                <span class="indicator" onclick="currentSlide(2)"></span>
-                <span class="indicator" onclick="currentSlide(3)"></span>
-                <span class="indicator" onclick="currentSlide(4)"></span>
-                <span class="indicator" onclick="currentSlide(5)"></span>
-                <span class="indicator" onclick="currentSlide(6)"></span>
-                <span class="indicator" onclick="currentSlide(7)"></span>
-                <span class="indicator" onclick="currentSlide(8)"></span>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/2.png" alt="Screenshot 2" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/3.png" alt="Screenshot 3" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/4.png" alt="Screenshot 4" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/5.png" alt="Screenshot 5" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/6.png" alt="Screenshot 6" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/7.png" alt="Screenshot 7" onclick="openModal(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="../Imagenes/Extras/8.png" alt="Screenshot 8" onclick="openModal(this.src)">
             </div>
         </div>
     </div>
 
-    <!-- Modal para imágenes -->
+    <!-- Modal para ver imagen completa -->
     <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modalImage" src="" alt="">
-            <p id="modalCaption"></p>
-            <button class="modal-nav prev" onclick="modalPrev()">❮</button>
-            <button class="modal-nav next" onclick="modalNext()">❯</button>
-        </div>
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
 
     <!-- 🚀 JavaScript externo para el carrusel -->

@@ -66,11 +66,16 @@ function updateModalImage() {
     const modalCaption = document.getElementById('modalCaption');
     
     modalImage.src = images[slideIndex].src;
-    modalCaption.textContent = images[slideIndex].caption;
+    // Asegúrate de que todas tus imágenes en el array 'images' tengan la propiedad 'caption' para evitar errores.
+    // Si no tienen 'caption', usa el siguiente código:
+    modalCaption.textContent = images[slideIndex].caption || ''; 
 }
 
 // 🚀 INICIALIZACIÓN CUANDO LA PÁGINA CARGA
 document.addEventListener('DOMContentLoaded', function() {
+    // 🌟 LÍNEA DE CÓDIGO AÑADIDA PARA INICIALIZAR LA POSICIÓN DEL CARRUSEL EN EL ÍNDICE 0
+    currentSlide(1); 
+    
     // Configurar eventos de las imágenes para abrir modal
     document.querySelectorAll('.gallery-image').forEach((img, index) => {
         img.addEventListener('click', () => {
