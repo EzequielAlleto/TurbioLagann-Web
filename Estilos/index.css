@@ -1,6 +1,3 @@
-/* 🎨 ESTILOS PARA PORTAFOLIO "COSMIC VANGUARD - FULL WIDTH" */
-
-/* Reset y estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -8,38 +5,33 @@
 }
 
 body {
-    /* Fondo espacial oscuro con gradiente sutil */
+
     font-family: 'Poppins', sans-serif; 
     line-height: 1.6;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     min-height: 100vh;
     color: #e2e8f0; 
-    padding: 0; /* ¡QUITAMOS EL PADDING DEL BODY! */
+    padding: 0; 
     display: flex;
     flex-direction: column;
-    /* Ya no es necesario alinear al centro */
 }
 
-/* Contenedor principal para centrar el contenido */
 #Titulo, #Introduccion, #Contenido, #comentarios, #footer, #contacto {
-    /* ¡ELIMINAMOS EL MAX-WIDTH! */
+
     width: 100%; 
-    margin-bottom: 0; /* Eliminamos el margin-bottom entre secciones para que se toquen */
-    border-radius: 0; /* Eliminamos el border-radius para que los bloques sean completos */
-    box-shadow: none; /* Eliminamos la sombra que simulaba una caja */
-    /* Aseguramos que todas las secciones tengan 100% de ancho */
+    margin-bottom: 0; 
+    border-radius: 0; 
+    box-shadow: none; 
 }
 
-
-/* TÍTULO MEJORADO (HEADER) */
 #Titulo {
     background-color: #1e293b; 
     text-align: center;
-    padding: 40px 20px 60px 20px; 
+    padding: 40px 20px 0px 20px; 
     position: relative;
-    border-radius: 0; /* Full width */
+    border-radius: 0; 
     overflow: hidden;
-    border: none; /* Sin borde */
+    border: none; 
 }
 
 #Titulo h1 {
@@ -58,13 +50,12 @@ body {
     letter-spacing: 1px;
 }
 
-/* INTRODUCCIÓN SIMPLE (Acerca de) */
 #Introduccion {
     background-color: #1e293b;
     padding: 50px 30px;
     text-align: center;
     border-radius: 0;
-    border: none; /* Sin bordes */
+    border: none; 
 }
 
 #Introduccion h2 {
@@ -76,7 +67,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Línea de separación para el título de la sección */
 #Introduccion h2::after {
     content: '';
     position: absolute;
@@ -93,24 +83,20 @@ body {
     color: #cbd5e1;
     font-size: 1.2em;
     margin-bottom: 30px;
-    /* Mantenemos el MAX-WIDTH aquí solo para la lectura del texto, 
-       pero la sección completa es 100% ancha. */
     max-width: 700px; 
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
 }
 
-/* POSTER SIMPLE */
 .poster-container {
     display: inline-block;
     margin-top: 20px;
 }
 
-/* IMAGEN SIMPLE */
 #Introduccion img {
     max-width: 100%;
-    width: 400px; 
+    width: 500px; 
     height: auto;
     border-radius: 10px;
     border: 4px solid #334155; 
@@ -123,7 +109,6 @@ body {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-/* 📦 SECCIÓN DE CONTENIDO MEJORADA (LAS CARDS) */
 #Contenido {
     background-color: #0f172a; 
     padding: 50px 30px;
@@ -131,7 +116,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 0;
-    border: none; /* Sin bordes */
+    border: none; 
 }
 
 #Contenido h2 {
@@ -144,7 +129,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Línea de separación para el título de la sección */
 #Contenido h2::after {
     content: '';
     position: absolute;
@@ -157,20 +141,15 @@ body {
     border-radius: 5px;
 }
 
-
-/* Grid container para las cards */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 35px; 
     padding: 20px 0;
-    /* Mantenemos el MAX-WIDTH aquí para que las cards no se estiren demasiado 
-       en pantallas ultra-anchas, pero la sección de fondo es 100% */
     max-width: 1200px; 
-    margin: 0 auto; /* Centramos el grid dentro del contenedor de 100% de ancho */
+    margin: 0 auto; 
 }
 
-/* Estilo de cada card */
 .card {
     background-color: #1e293b; 
     border-radius: 10px;
@@ -188,7 +167,6 @@ body {
     border-color: #a855f7;
 }
 
-/* Imágenes de las cards */
 .card-image {
     width: 100%;
     height: 200px; 
@@ -198,7 +176,6 @@ body {
     border: 1px solid #334155;
 }
 
-/* Títulos de las cards */
 .card h3 {
     color: #cbd5e1;
     font-size: 1.5em;
@@ -206,7 +183,6 @@ body {
     font-weight: 700;
 }
 
-/* Estadísticas de contenido (Tags) */
 .card-stats {
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +202,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Información técnica */
 .card-info {
     display: flex;
     justify-content: space-between;
@@ -254,7 +229,6 @@ body {
     font-weight: 600;
 }
 
-/* Botones de las cards */
 .card-button {
     display: inline-block;
     background: linear-gradient(90deg, #a855f7 0%, #22d3ee 100%); 
@@ -278,9 +252,6 @@ body {
     box-shadow: none;
 }
 
-
-
-/* 📱 RESPONSIVE DESIGN MEJORADO */
 @media (max-width: 768px) {
     /* Header Mobile */
     #Titulo {
@@ -295,7 +266,6 @@ body {
         font-size: 1.1em;
     }
     
-    /* Introducción Mobile */
     #Introduccion {
         padding: 30px 20px;
     }
@@ -313,7 +283,6 @@ body {
         width: 300px;
     }
     
-    /* Contenido Mobile */
     #Contenido {
         padding: 40px 20px;
     }
@@ -326,8 +295,8 @@ body {
     .grid-container {
         grid-template-columns: 1fr;
         gap: 30px;
-        max-width: 100%; /* Permitimos que ocupe todo el ancho disponible en móvil */
-        padding: 0 15px; /* Añadimos padding a los lados para que las cards no toquen los bordes */
+        max-width: 100%; 
+        padding: 0 15px; 
     }
     
     .card {
@@ -352,21 +321,18 @@ body {
     }
 }
 
-
-/* Sección de contacto espectacular */
 #contacto {
     background-color: #22d3ee; 
     padding: 50px;
     margin: 0;
     text-align: center;
-    box-shadow: none; /* Quitamos la sombra de caja */
+    box-shadow: none; 
     position: relative;
     overflow: hidden;
     color: #0f172a; 
     border-radius: 0;
 }
 
-/* Footer moderno */
 #footer {
     background-color: #020617; 
     color: #94a3b8; 
@@ -374,8 +340,8 @@ body {
     padding: 35px;
     margin: 0;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
-    border-radius: 0; /* Full width */
-    border: none; /* Sin bordes */
+    border-radius: 0; 
+    border: none; 
 }
 
 #footer p {
@@ -401,7 +367,6 @@ body {
     text-decoration: underline;
 }
 
-/* Scrollbar personalizada - Se mantienen los colores de acento */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -429,7 +394,6 @@ body {
     }
 }
 
-/* 💬 ESTILOS DE COMENTARIOS (Ajustados al tema oscuro) */
 #comentarios {
     background: #1e293b;
     border-radius: 0;
@@ -438,7 +402,6 @@ body {
     border: none;
 }
 
-/* Centrado del contenido de comentarios para mejor lectura en full-width */
 #comentarios > * {
     max-width: 1000px; 
     margin-left: auto;
@@ -460,7 +423,6 @@ body {
     font-size: 1.1em;
 }
 
-/* Formulario de comentarios */
 .comment-form {
     background: #0f172a;
     padding: 25px;
@@ -496,7 +458,6 @@ body {
     box-shadow: 0 5px 20px rgba(168, 85, 247, 0.5);
 }
 
-/* Lista de comentarios */
 #commentsList h4 {
     color: #22d3ee;
     border-bottom: 2px solid #22d3ee;
@@ -546,7 +507,6 @@ body {
     border: 2px dashed #334155;
 }
 
-/* 🔐 ESTILOS ADICIONALES PARA SISTEMA DE AUTH (Ajustados al tema oscuro) */
 .comments-header {
     border-bottom: 2px solid #a855f7;
 }
@@ -623,5 +583,3 @@ body {
 .comment-author.usuario {
     color: #22d3ee;
 }
-
-/* Fin del estilo Cosmic Vanguard Full Width */

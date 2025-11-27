@@ -1,6 +1,6 @@
 <?php
-// 💬 SISTEMA DE COMENTARIOS
-// TurbioLagann Web - Gestión de comentarios
+// SISTEMA DE COMENTARIOS
+// Gestión de comentarios
 
 session_start();
 require_once '../Conexion.php';
@@ -19,12 +19,10 @@ class Comments {
     }
 
     public function addComment($contenido, $pagina) {
-        // Verificar que el usuario esté logueado
         if (!isset($_SESSION['user_id'])) {
             return ["success" => false, "message" => "Debes iniciar sesión para comentar"];
         }
 
-        // Validaciones
         $contenido = trim($contenido);
         if (empty($contenido)) {
             return ["success" => false, "message" => "El comentario no puede estar vacío"];
@@ -34,13 +32,11 @@ class Comments {
             return ["success" => false, "message" => "El comentario no puede exceder 1000 caracteres"];
         }
 
-        // Filtrar palabras prohibidas
         $contenidoFiltrado = $this->filtrarPalabras($contenido);
         if ($contenidoFiltrado !== $contenido) {
             return ["success" => false, "message" => "Tu comentario contiene palabras no permitidas"];
         }
 
-        // Insertar comentario
         $query = "INSERT INTO comentarios (idUsuario, contenido, pagina) VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($query);
         
@@ -78,7 +74,6 @@ class Comments {
             return ["success" => false, "message" => "No autorizado"];
         }
 
-        // Verificar permisos (solo el autor o Turbio pueden eliminar)
         $checkQuery = "SELECT idUsuario FROM comentarios WHERE idComentario = ?";
         $checkStmt = $this->conn->prepare($checkQuery);
         $checkStmt->execute([$idComentario]);
@@ -107,9 +102,7 @@ class Comments {
         }
     }
 
-    // Filtrar palabras prohibidas
     private function filtrarPalabras($contenido) {
-        // Lista de palabras prohibidas (puedes agregar más)
         $palabrasProhibidas = [
             'spam', 'hack', 'mierda', 'puto', 'puta', 'idiota', 'imbecil',
             'pendejo', 'cabron', 'joder', 'coño', 'pija', 'verga', 'chingar',
@@ -120,20 +113,18 @@ class Comments {
         $contenidoLimpio = $contenido;
         
         foreach ($palabrasProhibidas as $palabra) {
-            // Buscar palabra (case insensitive)
             $pattern = '/\b' . preg_quote($palabra, '/') . '\b/i';
             if (preg_match($pattern, $contenidoLimpio)) {
-                return false; // Encontró palabra prohibida, retorna false
+                return false; 
             }
         }
         
-        return $contenidoLimpio; // No encontró palabras prohibidas
+        return $contenidoLimpio; 
     }
 
 
 }
 
-// Procesar requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);
     $action = $input['action'] ?? '';

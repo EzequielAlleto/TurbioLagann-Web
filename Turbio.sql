@@ -18,6 +18,3 @@ CREATE TABLE comentarios (
     fechaComentario DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (idUsuario) REFERENCES usuarios(idUsuario)
 );
-
-INSERT INTO usuarios (nombreUsuario, contrasena, tipoUsuario) VALUES
-('TurbioLagann', UNHEX(SHA2('SUPERTTGL2007', 256)), 'turbio');

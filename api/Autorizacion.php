@@ -1,6 +1,6 @@
 <?php
-// 🔐 SISTEMA DE AUTENTICACIÓN
-// TurbioLagann Web - Login y Registro
+//  SISTEMA DE AUTENTICACIÓN
+// Login y Registro
 
 session_start();
 require_once '../Conexion.php';
@@ -55,10 +55,10 @@ class Auth {
         $stmt->execute([$nombreUsuario]);
         
         if ($user = $stmt->fetch()) {
-            // Verificar usando SHA2 (igual que en la BD)
+
             $hashedInput = hash('sha256', $contrasena);
             if ($hashedInput === bin2hex($user['contrasena'])) {
-                // Crear sesión
+
                 $_SESSION['user_id'] = $user['idUsuario'];
                 $_SESSION['username'] = $user['nombreUsuario'];
                 $_SESSION['user_type'] = $user['tipoUsuario'];

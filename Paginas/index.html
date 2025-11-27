@@ -4,7 +4,9 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <title>Pagina Principal | TurbioLagann Web</title>
     <link rel='stylesheet' href='../Estilos/index.css'>
     <link rel="icon" type="image/png" href="../Imagenes/Icono.png">
@@ -91,17 +93,14 @@
         </div>
     </div>
 
-    <!-- 💬 SECCIÓN DE COMENTARIOS -->
     <div id="comentarios">
         <div class="comments-header">
-             <h3> Comentarios de la comunidad</h3>
             <div id="user-info" style="display: none;">
                 <span> Hola, <strong id="current-user"></strong></span>
                 <button id="logout-btn" class="auth-btn secondary">Cerrar Sesión</button>
             </div>
         </div>
         
-        <!-- Formulario de comentarios (solo visible si está logueado) -->
         <div id="comment-form-container" style="display: none;">
             <div class="comment-form">
                 <textarea id="comment-text" placeholder="Escribe tu comentario aquí..." maxlength="1000" rows="4"></textarea>
@@ -112,7 +111,6 @@
             </div>
         </div>
         
-        <!-- Prompt de login (visible si NO está logueado) -->
         <div id="login-prompt" class="login-prompt">
             <h4>¡Únete a la conversación!</h4>
             <p>Inicia sesión para participar en los comentarios</p>
@@ -122,14 +120,12 @@
             </div>
         </div>
         
-        <!-- Formularios de login y registro (inicialmente ocultos) -->
         <div id="auth-forms" style="display: none;">
             <div class="auth-tabs">
                 <button class="auth-tab active" id="login-tab">Iniciar Sesión</button>
                 <button class="auth-tab" id="register-tab">Registrarse</button>
             </div>
             
-            <!-- Formulario de Login -->
             <form id="login-form" class="auth-form">
                 <h4>Iniciar Sesión</h4>
                 <div class="form-group">
@@ -142,7 +138,6 @@
                 <button type="button" id="cancel-auth" class="auth-btn secondary">Cancelar</button>
             </form>
             
-            <!-- Formulario de Registro -->
             <form id="register-form" class="auth-form" style="display: none;">
                 <h4>Crear Cuenta</h4>
                 <div class="form-group">
@@ -157,10 +152,8 @@
             </form>
         </div>
         
-        <!-- Lista de comentarios -->
         <div id="comments-section">
             <div id="comments-list">
-                <!-- Los comentarios se cargarán aquí -->
             </div>
         </div>
     </div>
@@ -172,7 +165,6 @@
             <p>Enterate de las novedades en <a href="Actualizaciones.html">Actualizaciones</a></p>
     </div>
 
-    <!-- 💬 Sistema de Autenticación y Comentarios -->
     <script src="../Scripts/AutorizacionComentarios.js"></script>
 
 </body>
