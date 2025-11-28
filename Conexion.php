@@ -3,10 +3,10 @@
 // TurbioLagann Web - Configuración MySQL
 
 class Database {
-    private $host = "sql211.infinityfree.com";
-    private $database = "if0_40244313_turbio"; 
-    private $username = "if0_40244313";
-    private $password = "93GKGF5TC2MhNXo";
+    private $host = "";
+    private $database = ""; 
+    private $username = "";
+    private $password = "";
     private $connection;
 
     public function getConnection() {
